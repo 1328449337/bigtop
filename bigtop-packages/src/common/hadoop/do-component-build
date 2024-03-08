@@ -68,7 +68,7 @@ mkdir build/src
 # Build artifacts
 MAVEN_OPTS="-Dzookeeper.version=$ZOOKEEPER_VERSION "
 MAVEN_OPTS+="-Dhbase.profile=2.0 "
-MAVEN_OPTS+="-DskipTests -DskipITs -X"
+MAVEN_OPTS+="-DskipTests -DskipITs -X package"
 
 # Include common Maven Deployment logic
 . $(dirname ${0})/maven_deploy.sh
