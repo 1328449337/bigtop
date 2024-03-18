@@ -28,7 +28,7 @@ if [ $HOSTTYPE = "aarch64" ] ; then
       -Dclassifier=linux-aarch_64 -Dpackaging=exe -Dfile=/usr/local/protobuf-2.5.0/bin/protoc
 fi
 
-BUILD_TEZ_OPTS="clean package \
+BUILD_TEZ_OPTS="-X clean package \
 -Dtar -Dhadoop.version=${HADOOP_VERSION} \
 -Phadoop28 \
 -DskipTests"
