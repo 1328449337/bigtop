@@ -25,3 +25,5 @@ if [ "${OS}" = "openEuler" ]; then
 fi
 
 ./configure --prefix=$1 --with-python --with-libxml --with-gssapi --disable-orca CFLAGS='-fcommon -Wno-implicit-fallthrough'
+
+./configure --prefix=/usr/lib/gpdb --with-python --with-libxml --with-gssapi --disable-orca 'CFLAGS=-fcommon -Wno-implicit-fallthrough'
