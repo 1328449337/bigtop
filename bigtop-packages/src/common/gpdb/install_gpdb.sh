@@ -17,3 +17,8 @@
 set -ex
 
 make install DESTDIR=$1
+
+
+### ÍÆ³öpython 27
+
+conda deactivate
