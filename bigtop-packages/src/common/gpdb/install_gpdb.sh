@@ -17,6 +17,7 @@
 set -ex
 
 echo '####################execute  install_gpdb.sh ################'
+source ~/.bashrc
 conda activate py27
 
 make install DESTDIR=$1

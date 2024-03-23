@@ -17,6 +17,7 @@
 set -ex
 
 echo '####################execute  do-component-build.sh ################'
+source ~/.bashrc
 conda activate py27
 
 rm -f gpdb
