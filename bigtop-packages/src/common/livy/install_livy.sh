@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -16,7 +16,7 @@
 # limitations under the License.
 
 set -e
-
+source ~/.bashrc
 usage() {
   echo "
 usage: $0 <options>
