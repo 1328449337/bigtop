@@ -16,6 +16,9 @@
 
 set -ex
 
+echo '####################execute  do-component-configure.sh ################'
+
+
 #specify the verion of python for openEuler
 . /etc/os-release
 OS="$ID"
@@ -24,7 +27,7 @@ if [ "${OS}" = "openEuler" ]; then
   sed -i 's|python gpconfig_modules|python2 gpconfig_modules|g' gpMgmt/bin/Makefile
 fi
 
-# Ê¹ÓÃconda py27 Ö´ÐÐ±àÒëÈÎÎñ
+# Ê¹ï¿½ï¿½conda py27 Ö´ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 source ~/.bashrc
 conda activate py27
 
@@ -32,3 +35,5 @@ conda activate py27
 ./configure --prefix=$1 --with-python --with-libxml --with-gssapi --disable-orca CFLAGS='-fcommon -Wno-implicit-fallthrough'
 
 ./configure --prefix=/usr/lib/gpdb --with-python --with-libxml --with-gssapi --disable-orca 'CFLAGS=-fcommon -Wno-implicit-fallthrough'
+
+echo '####################execute  do-component-configure.sh  finish ################'
